@@ -1,5 +1,4 @@
 #TO DO : SUMMARY, ONNX EXPORT, LIBTORCH EXPORT, LOADING, SAVING
-from torch.optim.adagrad
 
 from torch.nn.parallel.data_parallel import DataParallel
 import torch
