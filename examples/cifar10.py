@@ -21,6 +21,10 @@ class ConvBlock(nn.Module):
             nn.BatchNorm2d(out_channels),
             nn.ReLU()
         )
+    
+    def forward(self,x):
+
+        return self.net(x)
 
 class CifarNet(nn.Module):
     def __init__(self,num_classes=10):
@@ -52,10 +56,10 @@ class CifarNet(nn.Module):
     def forward(self,x):
 
         x = self.net(x)
-        x = x.view(-1)
+        x = x.view(x.size(0),-1)
         return self.classifier(x)
 
-t1 = torch.FloatTensor(10,3,32,32)
+t1 = torch.FloatTensor(32,3,32,32)
 
 m = CifarNet()
 

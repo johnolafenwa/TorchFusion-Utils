@@ -2,6 +2,7 @@
 
 from torch.nn.parallel.data_parallel import DataParallel
 import torch
+import copy
 
 def clip_grads(model,lower,upper):
     """
@@ -19,11 +20,18 @@ def save_model(model,path,save_architecture):
     if type(model) == DataParallel:
         model = model.module
 
+    if isinstance(model,MultiSequential):
+
+        for child in model.children():
+                for c in child.children():
+                    model = c
+
+    model = copy.deepcopy(model).cpu()
+
     if save_architecture:
         torch.save(model, path)
     else:
         state = model.state_dict()
-        for key in state: state[key] = state[key].clone().cpu()
         torch.save(state, path)
 
 def load_model(model,path):
