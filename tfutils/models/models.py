@@ -26,6 +26,7 @@ def save_model(model,path,save_architecture=False):
         for child in model.children():
                 for c in child.children():
                     model = c
+                    break
 
     model = copy.deepcopy(model).cpu()
 
