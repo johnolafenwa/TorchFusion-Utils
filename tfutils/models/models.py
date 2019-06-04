@@ -3,6 +3,7 @@
 from torch.nn.parallel.data_parallel import DataParallel
 import torch
 import copy
+from ..fp16.fp16 import MultiSequential
 
 def clip_grads(model,lower,upper):
     """
