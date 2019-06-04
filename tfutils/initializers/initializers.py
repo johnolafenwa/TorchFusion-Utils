@@ -67,19 +67,19 @@ def sparsity_init(module,sparsity_ratio=0.1,std=0.01,types=[],category="all"):
 
     return init(module,types,sparse_,(sparsity_ratio,std),category)
 
-def kaiming_normal_init(module,neg_slope=0,mode="fan_in",non_linearity="leaky_relu",types=[],category="all"):
+def kaiming_normal_init(module,neg_slope=0,mode="fan_in",non_linearity="leaky_relu",types=[],category="weight"):
 
     return init(module,types,kaiming_normal_,(neg_slope,mode, non_linearity),category)
 
-def kaiming_uniform_init(module,neg_slope=0,mode="fan_in",non_linearity="leaky_relu",types=[],category="all"):
+def kaiming_uniform_init(module,neg_slope=0,mode="fan_in",non_linearity="leaky_relu",types=[],category="weight"):
 
     return init(module,types,kaiming_uniform_,(neg_slope,mode, non_linearity),category)
 
-def xavier_normal_init(module,gain=1,types=[],category="all"):
+def xavier_normal_init(module,gain=1,types=[],category="weight"):
 
     return init(module,types,xavier_normal_,(gain,),category)
 
-def xavier_uniform_init(module,gain=1,types=[],category="all"):
+def xavier_uniform_init(module,gain=1,types=[],category="weight"):
 
     return init(module,types,xavier_uniform_,(gain,),category)
 
