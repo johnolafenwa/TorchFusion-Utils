@@ -15,7 +15,7 @@ def clip_grads(model,lower,upper):
     for params in model.parameters():
         params.data.clamp_(lower,upper)
 
-def save_model(model,path,save_architecture):
+def save_model(model,path,save_architecture=False):
 
     if type(model) == DataParallel:
         model = model.module
