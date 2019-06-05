@@ -3,7 +3,7 @@
 from torch.nn.parallel.data_parallel import DataParallel
 import torch
 import copy
-from ..fp16.fp16 import MultiSequential
+from ..fp16.fp16 import MultiSequential,Convert
 
 def clip_grads(model,lower,upper):
     """
@@ -22,11 +22,12 @@ def save_model(model,path,save_architecture=False):
         model = model.module
 
     if isinstance(model,MultiSequential):
-
+        
         for child in model.children():
-                for c in child.children():
-                    model = c
-                    break
+
+            if not isinstance(child,Convert):
+                model = child 
+                break
 
     model = copy.deepcopy(model).cpu()
 
