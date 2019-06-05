@@ -1,8 +1,14 @@
+"""
+This file uses modified code from nvidia apex (https://github.com/NVIDIA/apex)
+"""
+
+
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
 from torch._utils import _flatten_dense_tensors, _unflatten_dense_tensors
 from torch.optim import Optimizer
+
 class MultiSequential(nn.Sequential):
     def __init__(self, *args):
         super(MultiSequential, self).__init__(*args)
@@ -181,6 +187,22 @@ def convertToFP16(model,optimizer,loss_scale=None,scale_window=1000,dynamic_scal
 
          
     return half_model(model), FP16_Optimizer(optimizer,dynamic_loss_scale=dynamic_loss_scale,static_loss_scale=static_loss_scale,dynamic_loss_args=dynamic_scale_args)
+
+def convertToFP32(model):
+
+    if type(model) == nn.DataParallel:
+        model = model.module
+
+    if isinstance(model,MultiSequential):
+        
+        for child in model.children():
+
+            if not isinstance(child,Convert):
+                model = child 
+                break
+
+    model = copy.deepcopy(model).float()
+    return model
 
 def backwards_debug_hook(grad):
     raise RuntimeError("master_params recieved a gradient in the backward pass!")
