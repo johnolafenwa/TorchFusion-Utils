@@ -29,7 +29,7 @@ def save_model(model,path,save_architecture=False):
                 model = child 
                 break
 
-    model = copy.deepcopy(model).cpu()
+    model = copy.deepcopy(model).float().cpu()
 
     if save_architecture:
         torch.save(model, path)
