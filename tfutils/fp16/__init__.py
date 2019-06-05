@@ -1,1 +1,1 @@
-from .fp16 import convertToFP16,FP16_Optimizer
+from .fp16 import convertToFP16,convertToFP32,FP16_Optimizer
