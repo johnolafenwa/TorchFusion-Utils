@@ -51,3 +51,41 @@ print("Top 5 Acc: ",top5_accc.getValue())
 
 Simple functions to easily analyse, load and save your pytorch models in an error free way.
 
+# Documentation
+
+Find tutorials and extensive documentation on using TorchFusion Utils from [https://utils.torchfusion.org](https://utils.torchfusion.org)
+
+
+# About The TorchFusion Project
+
+The TorchFusion project is a set of pytorch based deep learning libraries aimed at making making research easier and more productive. We believe anyone can be a great researcher with the right tools, thats why we build!
+
+TorchFusion is an initiative of [DeepQuest AI](https://deepquestai.com), founded by John Olafenwa & Moses Olafenwa.
+
+for any inuquires on the TorchFusion project, you can reach to the lead developer on [johnolafenwa@gmail.com]
+or on twitter via @johnolafenwa
+
+</pre>
+
+
+<h3><b><u>Contact Developers</u></b></h3>
+ <p>
+  <br>
+      <b>John Olafenwa</b> <br>
+    <i>Email: </i>    <a style="text-decoration: none;"  href="mailto:johnolafenwa@gmail.com"> johnolafenwa@gmail.com</a> <br>
+      <i>Website: </i>    <a style="text-decoration: none;" target="_blank" href="https://john.aicommons.science"> https://john.aicommons.science</a> <br>
+      <i>Twitter: </i>    <a style="text-decoration: none;" target="_blank" href="https://twitter.com/johnolafenwa"> @johnolafenwa</a> <br>
+      <i>Medium : </i>    <a style="text-decoration: none;" target="_blank" href="https://medium.com/@johnolafenwa"> @johnolafenwa</a> <br>
+      <i>Facebook : </i>    <a style="text-decoration: none;" href="https://facebook.com/olafenwajohn"> olafenwajohn</a> <br>
+
+<br>
+  <b>Moses Olafenwa</b> <br>
+    <i>Email: </i>    <a style="text-decoration: none;"  href="mailto:guymodscientist@gmail.com"> guymodscientist@gmail.com</a> <br>
+      <i>Website: </i>    <a style="text-decoration: none;" target="_blank" href="https://moses.aicommons.science"> https://moses.aicommons.science</a> <br>
+      <i>Twitter: </i>    <a style="text-decoration: none;" target="_blank" href="https://twitter.com/OlafenwaMoses"> @OlafenwaMoses</a> <br>
+      <i>Medium : </i>    <a style="text-decoration: none;" target="_blank" href="https://medium.com/@guymodscientist"> @guymodscientist</a> <br>
+      <i>Facebook : </i>    <a style="text-decoration: none;" target="_blank" href="https://facebook.com/moses.olafenwa"> moses.olafenwa</a> <br>
+<br>
+ </p>
+
+ <br>
