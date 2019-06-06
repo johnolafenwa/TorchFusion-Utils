@@ -44,5 +44,12 @@ print("Top 5 Acc: ",top5_accc.getValue())
 Simple functions to easily analyse, load and save your pytorch models in an error free way.
 
 
-TorchFusion Utils is extremely light with no other dependency other than pytorch itself.
+**Installation**
+
+TorchFusion Utils is extremely light with no other dependency other than pytorch itself. 
+You can install from pypi
+
+<pre> pip3 install torchfusion-utils </pre>
+
+
 
