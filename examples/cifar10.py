@@ -1,15 +1,17 @@
 import torch
 import torch.nn as nn
-from tfutils.fp16 import convertToFP16
-from tfutils.initializers import *
-from tfutils.metrics import Accuracy
-from tfutils.models import load_model,save_model
+from torchfusion_utils.fp16 import convertToFP16
+from torchfusion_utils.initializers import *
+from torchfusion_utils.metrics import Accuracy
+from torchfusion_utils.models import load_model,save_model
 from torch.optim import Adam
 from torch.optim.lr_scheduler import StepLR
 from torchvision.datasets import CIFAR10
 from torch.utils.data import DataLoader
 import torchvision.transforms as transforms
 from tqdm import tqdm
+
+
 
 CUDA = False
 
@@ -174,7 +176,7 @@ def train_loop():
 
         lr_scheduler.step()
 
-        test_acc = evaluation_loop(model)
+        test_acc = evaluation_loop()
 
         if test_acc > best_acc:
             best_acc = test_acc
