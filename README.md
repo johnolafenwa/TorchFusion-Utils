@@ -3,6 +3,14 @@ A pytorch helper library for Mixed Precision Training, Metrics and More Utilitie
 
 TorchFusion Utils was built to enable pytorch programmers easily take advantage of advanced training techniques without having to use any specific trainer framework. It is very transparent and can be easily plugged in to existing pytorch code bases.
 
+# Installation
+
+TorchFusion Utils is extremely light with no other dependency other than pytorch itself. 
+You can install from pypi
+
+<pre> pip3 install torchfusion-utils </pre>
+
+
 # Core Features
 
 **Mixed Precision Training**
@@ -42,14 +50,4 @@ print("Top 5 Acc: ",top5_accc.getValue())
 **Model Utilities**
 
 Simple functions to easily analyse, load and save your pytorch models in an error free way.
-
-
-**Installation**
-
-TorchFusion Utils is extremely light with no other dependency other than pytorch itself. 
-You can install from pypi
-
-<pre> pip3 install torchfusion-utils </pre>
-
-
 
