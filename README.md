@@ -1,11 +1,11 @@
 # TorchFusion-Utils
 A pytorch helper library for Mixed Precision Training, Metrics and More Utilities to simplify training of deep learning models.
 
-TorchFusion Utils was built to enable pytorch programmers easily take advantage of advanced training techniques without having to use any specific trainer framework. It is very transparent and can be easily plugged in to existing pytorch code bases.
+TorchFusion Utils was built to enable pytorch programmers easily take advantage of advanced training techniques without having to use any specific trainer framework. It is very transparent and can be easily plugged in to existing [Pytorch](https://pytorch.org) code bases
 
 # Installation
 
-TorchFusion Utils is extremely light with no other dependency other than pytorch itself. 
+TorchFusion Utils is extremely light with no other dependency other than [Pytorch](https://pytorch.org) itself. 
 You can install from pypi
 
 <pre> pip3 install torchfusion-utils </pre>
@@ -15,7 +15,7 @@ You can install from pypi
 
 **Mixed Precision Training**
 
-In just two lines of code, you can speed up training of your pytorch models, reduce memory usage on any GPU and fit in larger batch sizes than was previously possible on your GPU.
+In just two lines of code, you can speed up training of your [Pytorch](https://pytorch.org) models, reduce memory usage on any GPU and fit in larger batch sizes than was previously possible on your GPU.
 
 <pre>#convert your model and optimizer to mixed precision mode
 model, optim = convertToFP16(model,optim)
@@ -49,7 +49,7 @@ print("Top 5 Acc: ",top5_accc.getValue())
 
 **Model Utilities**
 
-Simple functions to easily analyse, load and save your pytorch models in an error free way.
+Simple functions to easily analyse, load and save your [Pytorch](https://pytorch.org) models in an error free way.
 
 # Documentation
 
@@ -58,12 +58,9 @@ Find tutorials and extensive documentation on using TorchFusion Utils from [http
 
 # About The TorchFusion Project
 
-The TorchFusion project is a set of pytorch based deep learning libraries aimed at making making research easier and more productive. We believe anyone can be a great researcher with the right tools, thats why we build!
+The TorchFusion project is a set of [Pytorch](https://pytorch.org) based deep learning libraries aimed at making making research easier and more productive. We believe anyone can be a great researcher with the right tools, thats why we build!
 
 TorchFusion is an initiative of [DeepQuest AI](https://deepquestai.com), founded by John Olafenwa & Moses Olafenwa.
-
-for any inuquires on the TorchFusion project, you can reach to the lead developer on [johnolafenwa@gmail.com]
-or on twitter via @johnolafenwa
 
 </pre>
 
