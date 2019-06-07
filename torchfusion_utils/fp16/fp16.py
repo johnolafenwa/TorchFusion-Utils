@@ -177,7 +177,7 @@ def half_model(model):
    
     return MultiSequential(Convert(), BN_convert_float(model.half()))
 
-def convertToFP16(model,optimizer,loss_scale=None,scale_window=1000,dynamic_scale_args=None):
+def convertToFP16(model,optimizer,loss_scale=None,dynamic_scale_args=None):
 
     dynamic_loss_scale = True
     static_loss_scale = 128
