@@ -33,14 +33,13 @@ def init(module,types,initializer,init_params=None,category="all"):
 
     module.apply(init_func)
 
+def normal_init(module,init_params={"mean":0,"std":1},types=[],category="all"):
 
-def normal_init(module,mean=0,std=1,types=[],category="all"):
+    return init(module,types,normal_,init_params,category)
 
-    return init(module,types,normal_,{"mean":mean,"std":std},category)
+def uniform_init(module,init_params={"lower":0,"upper":1},types=[],category="all"):
 
-def uniform_init(module,lower=0,upper=1,types=[],category="all"):
-
-    return init(module,types,uniform_,{"lower":lower,"upper":upper},category)
+    return init(module,types,uniform_,init_params,category)
 
 def constant_init(module,value,types=[],category="all"):
 
@@ -63,26 +62,26 @@ def dirac_init(module,types=[],category="all"):
     return init(module,types,dirac_,None,category)
 
 
-def sparsity_init(module,sparsity_ratio=0.1,std=0.01,types=[],category="all"):
+def sparsity_init(module,init_params={"sparsity":0.1,"std":0.01},types=[],category="all"):
 
-    return init(module,types,sparse_,{"sparsity":sparsity_ratio,"std":std},category)
+    return init(module,types,sparse_,init_params,category)
 
-def kaiming_normal_init(module,neg_slope=0,mode="fan_in",non_linearity="leaky_relu",types=[],category="weight"):
+def kaiming_normal_init(module,init_params={"a":0,"mode":"fan_in","nonlinearity":"leaky_relu"},types=[],category="weight"):
 
-    return init(module,types,kaiming_normal_,{"a":neg_slope,"mode":mode,"nonlinearity":non_linearity},category)
+    return init(module,types,kaiming_normal_,init_params,category)
 
-def kaiming_uniform_init(module,neg_slope=0,mode="fan_in",non_linearity="leaky_relu",types=[],category="weight"):
+def kaiming_uniform_init(module,init_params={"a":0,"mode":"fan_in","nonlinearity":"leaky_relu"},types=[],category="weight"):
 
-    return init(module,types,kaiming_uniform_,{"a":neg_slope,"mode":mode,"nonlinearity":non_linearity},category)
+    return init(module,types,kaiming_uniform_,init_params,category)
 
-def xavier_normal_init(module,gain=1,types=[],category="weight"):
+def xavier_normal_init(module,init_params={"gain":1},types=[],category="weight"):
 
-    return init(module,types,xavier_normal_,{"gain":gain},category)
+    return init(module,types,xavier_normal_,init_params,category)
 
-def xavier_uniform_init(module,gain=1,types=[],category="weight"):
+def xavier_uniform_init(module,init_params={"gain":1},types=[],category="weight"):
 
-    return init(module,types,xavier_uniform_,{"gain":gain},category)
+    return init(module,types,xavier_uniform_,init_params,category)
 
-def orthorgonal_init(module,gain=1,types=[],category="all"):
+def orthorgonal_init(module,init_params={"gain":1},types=[],category="all"):
 
-    return init(module,types,orthogonal_,{"gain":gain},category)
+    return init(module,types,orthogonal_,init_params,category)
