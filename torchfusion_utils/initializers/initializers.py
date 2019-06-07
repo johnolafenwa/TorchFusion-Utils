@@ -36,7 +36,7 @@ def init(module,types,initializer,init_params=None,category="all"):
 
 def normal_init(module,mean=0,std=1,types=[],category="all"):
 
-    return init(module,types,normal_,{"mean":mean,"std":std),category)
+    return init(module,types,normal_,{"mean":mean,"std":std},category)
 
 def uniform_init(module,lower=0,upper=1,types=[],category="all"):
 
