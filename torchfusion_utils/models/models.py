@@ -4,18 +4,8 @@ from torch.nn.parallel.data_parallel import DataParallel
 import torch
 import copy
 from ..fp16.fp16 import MultiSequential,Convert
+from collections import namedtuple
 
-
-def clip_grads(model,lower,upper):
-    """
-
-    :param model:
-    :param lower:
-    :param upper:
-    :return:
-    """
-    for params in model.parameters():
-        params.data.clamp_(lower,upper)
 
 def save_model(model,path,save_architecture=False):
 
