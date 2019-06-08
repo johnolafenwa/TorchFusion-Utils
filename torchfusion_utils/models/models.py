@@ -6,6 +6,7 @@ import torch.nn as nn
 import copy
 from ..fp16.fp16 import MultiSequential,Convert
 from collections import namedtuple
+import os
 
 
 def save_model(model,path,save_architecture=False):
