@@ -8,7 +8,7 @@ TorchFusion Utils was built to enable pytorch programmers easily take advantage 
 TorchFusion Utils is extremely light with no other dependency other than [Pytorch](https://pytorch.org) itself. 
 You can install from pypi
 
-<pre> pip3 install torchfusion-utils </pre>
+<pre> pip3 install torchfusion-utils --upgrade </pre>
 
 
 # Core Features
