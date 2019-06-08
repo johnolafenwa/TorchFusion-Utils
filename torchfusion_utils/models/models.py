@@ -2,6 +2,7 @@
 
 from torch.nn.parallel.data_parallel import DataParallel
 import torch
+import torch.nn as nn
 import copy
 from ..fp16.fp16 import MultiSequential,Convert
 from collections import namedtuple
@@ -89,7 +90,7 @@ def model_summary(model,*input_tensors,item_length=26):
             summary.append(
                 ModuleDetails(name=layer_name, input_size=list(input[0].size()), output_size=list(          output.size()), num_parameters=params, multiply_adds=flops))
 
-        if not isinstance(module, nn.ModuleList) and not isinstance(module, nn.Sequential) and not isinstance(module,tofp16)  and module != model:
+        if not isinstance(module, nn.ModuleList) and not isinstance(module, nn.Sequential) and not isinstance(module,MultiSequential) and not isinstance(module,Convert)  and module != model:
             hooks.append(module.register_forward_hook(hook))
 
     model.apply(add_hooks)
