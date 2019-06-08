@@ -8,6 +8,7 @@ import torch.nn as nn
 from torch.autograd import Variable
 from torch._utils import _flatten_dense_tensors, _unflatten_dense_tensors
 from torch.optim import Optimizer
+import copy
 
 class MultiSequential(nn.Sequential):
     def __init__(self, *args):
